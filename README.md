@@ -8,3 +8,10 @@ Webová aplikace sloužící pro správu a vyhodnocování soutěží medvědí 
 - Správa uživatelů
 - Možnost vyhodnocování více uživateli
 - (tisk diplomů)
+
+## Použité technologie
+- Docker Compose
+- Nginx
+- ASP.NET Core
+- Vue.js
+- SurrealDB
