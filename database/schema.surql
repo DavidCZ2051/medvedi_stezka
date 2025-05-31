@@ -1,0 +1,6 @@
+DEFINE NAMESPACE IF NOT EXISTS medvedi_stezka;
+DEFINE DATABASE IF NOT EXISTS medvedi_stezka;
+
+# Users table
+DEFINE TABLE IF NOT EXISTS users;
+DEFINE FIELD IF NOT EXISTS username ON users TYPE string;
