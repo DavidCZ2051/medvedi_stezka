@@ -3,21 +3,21 @@ services:
     build: MedvediStezkaAPI
     expose:
       - "8080"
+    depends_on:
+      - database
+    env_file:
+      - .env
   database:
     image: surrealdb/surrealdb:v2.3.3
     user: root
     entrypoint: 
       - /surreal
       - start
-      - --user
-      - root
-      - --pass
-      - root
       - rocksdb:medvedi_stezka.db
     env_file:
-      - database/.env
+      - .env
     ports:
-      - "8000:8000"
+      - "8000:8000" # Only for development
   gateway:
     build: gateway
     ports:

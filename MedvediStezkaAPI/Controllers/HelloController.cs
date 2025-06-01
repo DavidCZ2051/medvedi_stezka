@@ -1,14 +1,14 @@
+using MedvediStezkaAPI.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using SurrealDb.Net;
-using SurrealDb.Net.Models.Response;
 
 namespace MedvediStezkaAPI.Controllers
 {
     [ApiController]
     [Route("/")]
-    public class HelloController(ISurrealDbClient db) : ControllerBase
+    public class HelloController(HelloService helloService) : ControllerBase
     {
-        private readonly ISurrealDbClient _db = db;
+        private readonly HelloService _helloService = helloService;
 
         [HttpGet]
         public IActionResult Get()
@@ -18,19 +18,10 @@ namespace MedvediStezkaAPI.Controllers
 
         [HttpGet]
         [Route("/test")]
+        [Authorize]
         public async Task<IActionResult> Test()
         {
-            SurrealDbResponse response = await _db.Query($"RETURN 1 + 1;");
-            if (response.FirstOk == null)
-            {
-                return BadRequest("No valid response from the query.");
-            }
-            int? data = response.FirstOk.GetValue<int>();
-            if (data == null)
-            {
-                return BadRequest("No data returned from the query.");
-            }
-            return Ok(data);
+            return Ok(await _helloService.HelloTest());
         }
     }
 }
