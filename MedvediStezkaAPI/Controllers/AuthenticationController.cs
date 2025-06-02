@@ -1,5 +1,6 @@
 ﻿using MedvediStezkaAPI.Models;
 using MedvediStezkaAPI.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MedvediStezkaAPI.Controllers
@@ -19,6 +20,14 @@ namespace MedvediStezkaAPI.Controllers
                 return Unauthorized(new { error = result.errorMessage });
             }
             return Ok(new { result.token });
+        }
+
+        [HttpGet]
+        [Route("/auth/validate")]
+        [Authorize]
+        public IActionResult ValidateToken()
+        {
+            return NoContent();
         }
     }
 }

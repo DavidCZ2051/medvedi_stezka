@@ -4,6 +4,8 @@ USE NS medvedi_stezka DB medvedi_stezka;
 DEFINE TABLE IF NOT EXISTS users;
 DEFINE FIELD IF NOT EXISTS username ON users TYPE string;
 DEFINE FIELD IF NOT EXISTS password ON users TYPE string;
+DEFINE FIELD IF NOT EXISTS nickname ON users TYPE string;
+DEFINE FIELD IF NOT EXISTS role ON users TYPE "admin" | "leader" | "validator";
 
 # Logins table
 DEFINE TABLE IF NOT EXISTS logins;
