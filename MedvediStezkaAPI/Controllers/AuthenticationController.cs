@@ -14,12 +14,12 @@ namespace MedvediStezkaAPI.Controllers
         [Route("/auth/login")]
         public async Task<IActionResult> Login([FromBody] Login login)
         {
-            var result = await _authenticationService.Login(login);
-            if (result.errorMessage != null)
+            var (errorMessage, token) = await _authenticationService.Login(login);
+            if (errorMessage != null)
             {
-                return Unauthorized(new { error = result.errorMessage });
+                return Unauthorized(new { error = errorMessage });
             }
-            return Ok(new { result.token });
+            return Ok(new { token });
         }
 
         [HttpGet]

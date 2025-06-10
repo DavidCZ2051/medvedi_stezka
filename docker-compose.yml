@@ -18,9 +18,14 @@ services:
       - .env
     ports:
       - "8000:8000" # Only for development
+    volumes:
+      - database:/medvedi_stezka.db
   gateway:
     build: gateway
     ports:
       - "80:80"
     depends_on:
       - api
+
+volumes:
+  database:

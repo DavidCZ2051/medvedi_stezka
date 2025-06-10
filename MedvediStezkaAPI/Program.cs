@@ -1,6 +1,8 @@
-using Microsoft.AspNetCore.Authentication;
 using MedvediStezkaAPI.Handlers;
 using MedvediStezkaAPI.Services;
+using Microsoft.AspNetCore.Authentication;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -31,6 +33,8 @@ builder.Services.AddAuthentication(options =>
 // Add services
 builder.Services.AddScoped<HelloService>();
 builder.Services.AddScoped<MedvediStezkaAPI.Services.AuthenticationService>();
+builder.Services.AddScoped<CompetitionService>();
+builder.Services.AddScoped<UserService>();
 
 var app = builder.Build();
 

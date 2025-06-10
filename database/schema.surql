@@ -19,7 +19,7 @@ DEFINE FIELD IF NOT EXISTS expired ON logins VALUE <future> {RETURN IF expires =
 DEFINE TABLE IF NOT EXISTS competitions;
 DEFINE FIELD IF NOT EXISTS type ON competitions TYPE "district" | "region" | "nation";
 DEFINE FIELD IF NOT EXISTS location ON competitions TYPE string;
-DEFINE FIELD IF NOT EXISTS schoolYear ON competitions TYPE string;
+DEFINE FIELD IF NOT EXISTS schoolYear ON competitions TYPE string; # Format yyyy/yyyy (2025/2026)
 
 # Organizations table
 DEFINE TABLE IF NOT EXISTS organizations;
