@@ -7,20 +7,16 @@
       "RelativeMoniker": "D:0:0:{294EBCE7-F6FA-452B-B659-318E2B938F8D}|MedvediStezkaAPI.csproj|solutionrelative:controllers\\authenticationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{294EBCE7-F6FA-452B-B659-318E2B938F8D}|MedvediStezkaAPI.csproj|c:\\users\\david\\desktop\\medvedi_stezka\\medvedistezkaapi\\controllers\\hellocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{294EBCE7-F6FA-452B-B659-318E2B938F8D}|MedvediStezkaAPI.csproj|solutionrelative:controllers\\hellocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{294EBCE7-F6FA-452B-B659-318E2B938F8D}|MedvediStezkaAPI.csproj|c:\\users\\david\\desktop\\medvedi_stezka\\medvedistezkaapi\\services\\competitionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{294EBCE7-F6FA-452B-B659-318E2B938F8D}|MedvediStezkaAPI.csproj|solutionrelative:services\\competitionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{294EBCE7-F6FA-452B-B659-318E2B938F8D}|MedvediStezkaAPI.csproj|c:\\users\\david\\desktop\\medvedi_stezka\\medvedistezkaapi\\handlers\\tokenauthenticationhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{294EBCE7-F6FA-452B-B659-318E2B938F8D}|MedvediStezkaAPI.csproj|solutionrelative:handlers\\tokenauthenticationhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{294EBCE7-F6FA-452B-B659-318E2B938F8D}|MedvediStezkaAPI.csproj|c:\\users\\david\\desktop\\medvedi_stezka\\medvedistezkaapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{294EBCE7-F6FA-452B-B659-318E2B938F8D}|MedvediStezkaAPI.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{294EBCE7-F6FA-452B-B659-318E2B938F8D}|MedvediStezkaAPI.csproj|c:\\users\\david\\desktop\\medvedi_stezka\\medvedistezkaapi\\services\\authenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{294EBCE7-F6FA-452B-B659-318E2B938F8D}|MedvediStezkaAPI.csproj|solutionrelative:services\\authenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{294EBCE7-F6FA-452B-B659-318E2B938F8D}|MedvediStezkaAPI.csproj|c:\\users\\david\\desktop\\medvedi_stezka\\medvedistezkaapi\\models\\authenticationmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{294EBCE7-F6FA-452B-B659-318E2B938F8D}|MedvediStezkaAPI.csproj|solutionrelative:models\\authenticationmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{294EBCE7-F6FA-452B-B659-318E2B938F8D}|MedvediStezkaAPI.csproj|c:\\users\\david\\desktop\\medvedi_stezka\\medvedistezkaapi\\controllers\\competitioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{294EBCE7-F6FA-452B-B659-318E2B938F8D}|MedvediStezkaAPI.csproj|solutionrelative:controllers\\competitioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,32 +26,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "TokenAuthenticationHandler.cs",
-              "DocumentMoniker": "C:\\Users\\david\\Desktop\\medvedi_stezka\\MedvediStezkaAPI\\Handlers\\TokenAuthenticationHandler.cs",
-              "RelativeDocumentMoniker": "Handlers\\TokenAuthenticationHandler.cs",
-              "ToolTip": "C:\\Users\\david\\Desktop\\medvedi_stezka\\MedvediStezkaAPI\\Handlers\\TokenAuthenticationHandler.cs",
-              "RelativeToolTip": "Handlers\\TokenAuthenticationHandler.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAADUAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-01T19:57:41.574Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "HelloController.cs",
-              "DocumentMoniker": "C:\\Users\\david\\Desktop\\medvedi_stezka\\MedvediStezkaAPI\\Controllers\\HelloController.cs",
-              "RelativeDocumentMoniker": "Controllers\\HelloController.cs",
-              "ToolTip": "C:\\Users\\david\\Desktop\\medvedi_stezka\\MedvediStezkaAPI\\Controllers\\HelloController.cs",
-              "RelativeToolTip": "Controllers\\HelloController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-01T19:47:18.369Z"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -64,34 +36,49 @@
               "RelativeDocumentMoniker": "Controllers\\AuthenticationController.cs",
               "ToolTip": "C:\\Users\\david\\Desktop\\medvedi_stezka\\MedvediStezkaAPI\\Controllers\\AuthenticationController.cs",
               "RelativeToolTip": "Controllers\\AuthenticationController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-01T16:55:57.411Z",
+              "WhenOpened": "2025-06-17T15:36:07.204Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AuthenticationModels.cs",
-              "DocumentMoniker": "C:\\Users\\david\\Desktop\\medvedi_stezka\\MedvediStezkaAPI\\Models\\AuthenticationModels.cs",
-              "RelativeDocumentMoniker": "Models\\AuthenticationModels.cs",
-              "ToolTip": "C:\\Users\\david\\Desktop\\medvedi_stezka\\MedvediStezkaAPI\\Models\\AuthenticationModels.cs",
-              "RelativeToolTip": "Models\\AuthenticationModels.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAeAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\david\\Desktop\\medvedi_stezka\\MedvediStezkaAPI\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\david\\Desktop\\medvedi_stezka\\MedvediStezkaAPI\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAADAAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-01T16:48:10.867Z"
+              "WhenOpened": "2025-06-17T15:30:43.776Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "AuthenticationService.cs",
-              "DocumentMoniker": "C:\\Users\\david\\Desktop\\medvedi_stezka\\MedvediStezkaAPI\\Services\\AuthenticationService.cs",
-              "RelativeDocumentMoniker": "Services\\AuthenticationService.cs",
-              "ToolTip": "C:\\Users\\david\\Desktop\\medvedi_stezka\\MedvediStezkaAPI\\Services\\AuthenticationService.cs",
-              "RelativeToolTip": "Services\\AuthenticationService.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAADYAAAAAAAAAAAAAAA==",
+              "Title": "CompetitionController.cs",
+              "DocumentMoniker": "C:\\Users\\david\\Desktop\\medvedi_stezka\\MedvediStezkaAPI\\Controllers\\CompetitionController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CompetitionController.cs",
+              "ToolTip": "C:\\Users\\david\\Desktop\\medvedi_stezka\\MedvediStezkaAPI\\Controllers\\CompetitionController.cs",
+              "RelativeToolTip": "Controllers\\CompetitionController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-01T13:28:39.579Z"
+              "WhenOpened": "2025-06-17T14:50:58.644Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CompetitionService.cs",
+              "DocumentMoniker": "C:\\Users\\david\\Desktop\\medvedi_stezka\\MedvediStezkaAPI\\Services\\CompetitionService.cs",
+              "RelativeDocumentMoniker": "Services\\CompetitionService.cs",
+              "ToolTip": "C:\\Users\\david\\Desktop\\medvedi_stezka\\MedvediStezkaAPI\\Services\\CompetitionService.cs",
+              "RelativeToolTip": "Services\\CompetitionService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-17T14:34:04.488Z",
+              "EditorCaption": ""
             }
           ]
         }

@@ -24,11 +24,10 @@ namespace MedvediStezkaAPI.Services
 
             response = await _db.Query(
                 $$"""
-                SELECT username, nickname, role, record::id(id) AS id FROM ONLY (INSERT INTO users {
+                SELECT username, nickname, record::id(id) AS id FROM ONLY (INSERT INTO users {
                     username: {{register.Username}},
                     nickname: {{register.Nickname}},
-                    password: {{passwordHash}},
-                    role: {{register.Role}}
+                    password: {{passwordHash}}
                 }) LIMIT 1;
                 """
             );

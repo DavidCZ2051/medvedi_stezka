@@ -27,7 +27,7 @@ namespace MedvediStezkaAPI.Controllers
         [Authorize]
         public IActionResult ValidateToken()
         {
-            return NoContent();
+            return Ok();
         }
     }
 }

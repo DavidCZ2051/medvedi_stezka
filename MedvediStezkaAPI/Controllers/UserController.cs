@@ -16,7 +16,7 @@ namespace MedvediStezkaAPI.Controllers
             var (usernameTaken, user) = await _userService.CreateUser(register);
             return usernameTaken
                 ? Problem("Username is already taken.", statusCode: 409)
-                : CreatedAtAction("GetUser", user);
+                : Ok(user);
         }
 
         [HttpGet]
