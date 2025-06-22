@@ -60,7 +60,7 @@ export default defineConfig({
   ],
   build: {
     outDir: '../gateway/app',
-    emptyOutDir: false,
+    emptyOutDir: true,
   },
   optimizeDeps: {
     exclude: [
