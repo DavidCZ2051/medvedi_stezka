@@ -340,7 +340,7 @@
           }
         }
       },
-      "Microsoft.VisualStudio.Azure.Containers.Tools.Targets/1.22.1-Preview.1": {
+      "Microsoft.VisualStudio.Azure.Containers.Tools.Targets/1.22.1": {
         "type": "package",
         "build": {
           "build/Microsoft.VisualStudio.Azure.Containers.Tools.Targets.props": {},
@@ -1108,10 +1108,10 @@
         "microsoft.spatial.nuspec"
       ]
     },
-    "Microsoft.VisualStudio.Azure.Containers.Tools.Targets/1.22.1-Preview.1": {
-      "sha512": "cX5j5jEIx4si2ixyU5h1pHvVKhgK/RyL6UQrKYKv61ULJuRk/h8LOM2hnVW8JPAKlnmvWilMtEOcUTcTV2n+kg==",
+    "Microsoft.VisualStudio.Azure.Containers.Tools.Targets/1.22.1": {
+      "sha512": "EfYANhAWqmWKoLwN6bxoiPZSOfJSO9lzX+UrU6GVhLhPub1Hd+5f0zL0/tggIA6mRz6Ebw2xCNcIsM4k+7NPng==",
       "type": "package",
-      "path": "microsoft.visualstudio.azure.containers.tools.targets/1.22.1-preview.1",
+      "path": "microsoft.visualstudio.azure.containers.tools.targets/1.22.1",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
@@ -1140,7 +1140,7 @@
         "build/ToolsTarget.props",
         "build/ToolsTarget.targets",
         "icon.png",
-        "microsoft.visualstudio.azure.containers.tools.targets.1.22.1-preview.1.nupkg.sha512",
+        "microsoft.visualstudio.azure.containers.tools.targets.1.22.1.nupkg.sha512",
         "microsoft.visualstudio.azure.containers.tools.targets.nuspec",
         "tools/Microsoft.VisualStudio.Containers.Tools.Common.dll",
         "tools/Microsoft.VisualStudio.Containers.Tools.Shared.dll",
@@ -1453,7 +1453,7 @@
     "net9.0": [
       "BCrypt.Net-Next >= 4.0.3",
       "JWT >= 11.0.0",
-      "Microsoft.VisualStudio.Azure.Containers.Tools.Targets >= 1.22.1-Preview.1",
+      "Microsoft.VisualStudio.Azure.Containers.Tools.Targets >= 1.22.1",
       "SurrealDb.Net >= 0.8.0"
     ]
   },
@@ -1517,7 +1517,7 @@
           },
           "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
             "target": "Package",
-            "version": "[1.22.1-Preview.1, )"
+            "version": "[1.22.1, )"
           },
           "SurrealDb.Net": {
             "target": "Package",

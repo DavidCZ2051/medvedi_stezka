@@ -35,6 +35,7 @@ builder.Services.AddScoped<HelloService>();
 builder.Services.AddScoped<MedvediStezkaAPI.Services.AuthenticationService>();
 builder.Services.AddScoped<CompetitionService>();
 builder.Services.AddScoped<UserService>();
+builder.Services.AddScoped<OrganizationService>();
 
 builder.Services.AddCors(options =>
 {
