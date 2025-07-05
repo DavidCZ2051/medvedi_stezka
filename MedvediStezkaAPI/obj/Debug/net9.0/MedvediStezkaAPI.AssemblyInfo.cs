@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MedvediStezkaAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+164ae46765913b0e6a3c1b829e0d2f5a6aaa2ece")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+735b3b56a48aff284e282777a70b0e7cd8a48f1e")]
 [assembly: System.Reflection.AssemblyProductAttribute("MedvediStezkaAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MedvediStezkaAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

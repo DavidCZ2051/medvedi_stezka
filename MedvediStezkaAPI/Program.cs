@@ -31,11 +31,12 @@ builder.Services.AddAuthentication(options =>
 .AddScheme<AuthenticationSchemeOptions, TokenAuthenticationHandler>("Token", null);
 
 // Add services
-builder.Services.AddScoped<HelloService>();
 builder.Services.AddScoped<MedvediStezkaAPI.Services.AuthenticationService>();
 builder.Services.AddScoped<CompetitionService>();
-builder.Services.AddScoped<UserService>();
+builder.Services.AddScoped<ContestantService>();
+builder.Services.AddScoped<HelloService>();
 builder.Services.AddScoped<OrganizationService>();
+builder.Services.AddScoped<UserService>();
 
 builder.Services.AddCors(options =>
 {

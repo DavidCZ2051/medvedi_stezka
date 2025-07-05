@@ -1,6 +1,9 @@
 <template>
     <v-container>
         <v-row>
+            <v-col cols="12">
+                <v-btn @click="dialog = true">Vytvořit novou soutěž</v-btn>
+            </v-col>
             <v-col
                 v-for="competition in competitions"
                 :key="competition.id"
@@ -13,6 +16,42 @@
                 </v-card>
             </v-col>
         </v-row>
+
+        <v-dialog v-model="dialog" max-width="500">
+            <v-card>
+                <v-form @submit.prevent="createCompetition">
+                    <v-card-title>Vytvořit novou soutěž</v-card-title>
+                    <v-card-text>
+                        <v-text-field
+                            v-model="formData.location"
+                            label="Místo konání"
+                            :rules="[v => !!v || 'Místo konání je povinné']"
+                            required
+                        ></v-text-field>
+                        <v-text-field
+                            v-model="formData.schoolYear"
+                            label="Školní rok"
+                            :rules="[v => !!v || 'Školní rok je povinný']"
+                            required
+                        ></v-text-field>
+                        <v-select
+                            v-model="formData.type"
+                            :items="Object.keys(competitionTypes)"
+                            :item-title="key => competitionTypes[key]"
+                            :item-value="key => key"
+                            label="Druh kola"
+                            :rules="[v => !!v || 'Druh kola je povinný']"
+                            required
+                        ></v-select>
+                    </v-card-text>
+                    <v-card-actions>
+                        <v-spacer></v-spacer>
+                        <v-btn text @click="dialog = false">Zrušit</v-btn>
+                        <v-btn type="submit" color="primary">Vytvořit</v-btn>
+                    </v-card-actions>
+                </v-form>
+            </v-card>
+        </v-dialog>
     </v-container>
 </template>
 
@@ -21,18 +60,34 @@ import { ref, getCurrentInstance } from 'vue'
 import type { Ref } from 'vue'
 import { useRouter } from 'vue-router'
 
+onMounted(async () => {
+    await fetchCompetitions()
+})
+
 const instance = getCurrentInstance()!
 const router = useRouter()
 
-const competitions: Ref<Array<{ id: string; location: string; schoolYear: string; type: string }>> = ref([])
-
+const competitions: Ref<Array<{ id: string, location: string, schoolYear: string, type: string }>> = ref([])
 const competitionTypes: Record<string, string> = {
     'district': 'Okresní kolo',
     'region': 'Krajské kolo',
     'nation': 'Republikové kolo',
 }
 
-onMounted(async () => {
+const dialog = ref(false)
+const formData = ref({
+    location: '',
+    schoolYear: '',
+    type: ''
+})
+
+watch(dialog, (newValue) => {
+    if (!newValue) {
+        formData.value = { location: '', schoolYear: '', type: '' }
+    }
+})
+
+async function fetchCompetitions() {
     const response = await fetch(`${instance.appContext.config.globalProperties.$url}/competitions`, {
         method: 'GET',
         headers: {
@@ -51,7 +106,35 @@ onMounted(async () => {
     }
 
     competitions.value = await response.json()
-})
+}
+
+async function createCompetition() {
+    const response = await fetch(`${instance.appContext.config.globalProperties.$url}/competitions`, {
+        method: 'POST',
+        headers: {
+            'Authorization': `Bearer ${localStorage.getItem('token')}`,
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            'location': formData.value.location,
+            'schoolYear': formData.value.schoolYear,
+            'type': formData.value.type
+        })
+    })
+
+    if (!response.ok) {
+        if (response.status === 401) {
+            localStorage.removeItem('token')
+            router.replace('/login')
+            return
+        }
+        alert('Failed to create competition: ' + response.statusText)
+        return
+    }
+
+    await fetchCompetitions()
+    dialog.value = false
+}
 
 </script>
 

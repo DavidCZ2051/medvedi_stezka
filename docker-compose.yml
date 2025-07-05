@@ -8,7 +8,7 @@ services:
     env_file:
       - .env
   database:
-    image: surrealdb/surrealdb:v2.3.5
+    image: surrealdb/surrealdb:v2.3.6
     user: root
     entrypoint: 
       - /surreal
