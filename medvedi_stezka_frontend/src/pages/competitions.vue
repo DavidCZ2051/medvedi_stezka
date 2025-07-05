@@ -1,19 +1,15 @@
 <template>
     <v-container>
         <v-row>
-            <v-col cols="12">
-                <v-card>
-                    <v-card-text>
-                        <v-list>
-                            <v-list-item v-for="competition in competitions" :key="competition.id">
-                                <v-list-item-content>
-                                    <v-list-item-title>{{ competition.location }}</v-list-item-title>
-                                    <v-list-item-subtitle>{{ competition.schoolYear }}</v-list-item-subtitle>
-                                    <v-list-item-subtitle>{{ competition.type }}</v-list-item-subtitle>
-                                </v-list-item-content>
-                            </v-list-item>
-                        </v-list>
-                    </v-card-text>
+            <v-col
+                v-for="competition in competitions"
+                :key="competition.id"
+                cols="12"
+            >
+                <v-card :to="`/competition/${competition.id}`" link class="pb-4">
+                    <v-card-title>{{ competition.location }}</v-card-title>
+                    <v-card-subtitle>{{ competition.schoolYear }}</v-card-subtitle>
+                    <v-card-subtitle>{{ competitionTypes[competition.type] }}</v-card-subtitle>
                 </v-card>
             </v-col>
         </v-row>
@@ -30,6 +26,12 @@ const router = useRouter()
 
 const competitions: Ref<Array<{ id: string; location: string; schoolYear: string; type: string }>> = ref([])
 
+const competitionTypes: Record<string, string> = {
+    'district': 'Okresní kolo',
+    'region': 'Krajské kolo',
+    'nation': 'Republikové kolo',
+}
+
 onMounted(async () => {
     const response = await fetch(`${instance.appContext.config.globalProperties.$url}/competitions`, {
         method: 'GET',
@@ -39,6 +41,11 @@ onMounted(async () => {
     })
 
     if (!response.ok) {
+        if (response.status === 401) {
+            localStorage.removeItem('token')
+            router.replace('/login')
+            return
+        }
         alert('Failed to fetch competitions: ' + response.statusText)
         return
     }
@@ -47,3 +54,8 @@ onMounted(async () => {
 })
 
 </script>
+
+<route lang="yaml">
+meta:
+  layout: nav
+</route>

@@ -20,7 +20,10 @@ DEFINE FIELD OVERWRITE name ON TABLE organizations TYPE string;
 
 # Contestants table
 DEFINE TABLE IF NOT EXISTS contestants;
-DEFINE FIELD OVERWRITE name ON TABLE contestants TYPE string;
+DEFINE FIELD OVERWRITE name ON TABLE contestants TYPE object;
+DEFINE FIELD OVERWRITE name.first ON TABLE contestants TYPE string;
+DEFINE FIELD OVERWRITE name.middle ON TABLE contestants TYPE string | null;
+DEFINE FIELD OVERWRITE name.last ON TABLE contestants TYPE string;
 DEFINE FIELD OVERWRITE birthYear ON TABLE contestants TYPE int;
 
 # Competitions table

@@ -13,7 +13,7 @@ namespace MedvediStezkaAPI.Services
         public async Task<(string? errorMessage, string? token)> Login(Login login)
         {
             var response = await _db.Query(
-                $"SELECT VALUE [record::id(id), password] FROM ONLY users WHERE username = {login.Username};"
+                $"SELECT VALUE [record::id(id), password, nickname] FROM ONLY users WHERE username = {login.Username};"
             );
             string[]? user = response.GetValue<string[]?>(0);
 
@@ -28,6 +28,7 @@ namespace MedvediStezkaAPI.Services
             }
 
             string userId = user[0];
+            string nickname = user[2];
 
             long? tokenExpirationTime = null;
             if (!login.RememberMe)
@@ -41,6 +42,7 @@ namespace MedvediStezkaAPI.Services
                 .AddClaim("exp", tokenExpirationTime)
                 .AddClaim("iat", DateTimeOffset.UtcNow.ToUnixTimeSeconds())
                 .AddClaim("userId", userId)
+                .AddClaim("nickname", nickname)
                 .Encode();
 
             await _db.Query(

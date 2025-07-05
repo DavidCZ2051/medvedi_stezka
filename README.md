@@ -1,5 +1,5 @@
 # Medvědí stezka
-Webová aplikace sloužící pro správu a vyhodnocování soutěží medvědí stezky více uživateli zároveň.
+Moderní webová aplikace sloužící pro správu a vyhodnocování soutěží medvědí stezky více uživateli zároveň.
 
 ## Plánované funkce
 - OCR detekce odpovědí z kartiček
@@ -7,11 +7,11 @@ Webová aplikace sloužící pro správu a vyhodnocování soutěží medvědí 
 - Automatické vyhodnocování výsledků
 - Správa uživatelů
 - Možnost vyhodnocování více uživateli
-- (tisk diplomů)
+- Tisk diplomů
 
 ## Použité technologie
-- Docker Compose
-- Nginx
+- Vuetify (Typescript, Vue 3)
 - ASP.NET Core
-- Vue.js
 - SurrealDB
+- Nginx
+- Docker Compose

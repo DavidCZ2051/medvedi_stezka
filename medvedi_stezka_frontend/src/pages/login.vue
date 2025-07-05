@@ -6,29 +6,14 @@
                     <v-card-title class="text-h5">Přihlášení</v-card-title>
                     <v-card-text>
                         <v-form ref="form" @submit.prevent="login">
-                            <v-text-field
-                                v-model="username"
-                                label="Uživatelské jméno"
-                                :error-messages="usernameError"
-                                class="mb-1"
-                                required
-                            />
-                            <v-text-field
-                                v-model="password"
-                                label="Heslo"
-                                :type="showPassword ? 'text' : 'password'"
+                            <v-text-field v-model="username" label="Uživatelské jméno" :error-messages="usernameError"
+                                class="mb-1" required />
+                            <v-text-field v-model="password" label="Heslo" :type="showPassword ? 'text' : 'password'"
                                 :append-icon="showPassword ? 'mdi-eye-off' : 'mdi-eye'"
-                                @click:append="showPassword = !showPassword"
-                                :error-messages="passwordError"
-                                class="mb-1"
-                                required
-                            />
+                                @click:append="showPassword = !showPassword" :error-messages="passwordError"
+                                class="mb-1" required />
                             <div class="d-flex align-center" style="margin-top: -16px; margin-bottom: -8px;">
-                                <v-checkbox
-                                    v-model="rememberMe"
-                                    label="Zapamatovat si mě"
-                                    class="ma-0 pa-0"
-                                />
+                                <v-checkbox v-model="rememberMe" label="Zapamatovat si mě" class="ma-0 pa-0" />
                             </div>
                             <v-btn type="submit" color="primary" block>Přihlásit se</v-btn>
                         </v-form>
@@ -82,6 +67,5 @@ async function login() {
         localStorage.setItem('token', data.token)
         router.replace('/')
     }
-} 
-
+}
 </script>
