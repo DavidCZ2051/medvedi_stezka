@@ -2,40 +2,46 @@
     <v-container>
         <v-row>
             <v-col cols="12">
-            <v-btn @click="dialog = true">Vytvořit novou organizaci</v-btn>
+                <v-btn @click="dialog = true">Vytvořit novou organizaci</v-btn>
             </v-col>
-            <v-col
-            v-for="organization in organizations"
-            :key="organization.name"
-            cols="12"
-            class="py-1"
-            >
-            <v-card>
-                <v-card-title>{{ organization.name }}</v-card-title>
-            </v-card>
+            <v-col v-for="organization in organizations" :key="organization.name" cols="12" class="py-1">
+                <v-card>
+                    <v-card-title>{{ organization.name }}</v-card-title>
+                </v-card>
             </v-col>
         </v-row>
 
         <v-dialog v-model="dialog" max-width="500">
             <v-card>
                 <v-form @submit.prevent="createOrganization">
-                    <v-card-title>Vytvořit novou organizaci</v-card-title>
+                    <v-card-title class="text-h6 font-weight-bold">
+                        Vytvořit novou organizaci
+                    </v-card-title>
+
                     <v-card-text>
-                        <v-text-field
-                            v-model="formData.name"
-                            label="Název organizace"
-                            :rules="[v => !!v || 'Název organizace je povinný']"
-                            required
-                        ></v-text-field>
+                        <v-container class="pa-0" fluid>
+                            <v-row dense>
+                                <v-col cols="12">
+                                    <v-text-field v-model="formData.name" label="Název organizace"
+                                        prepend-icon="mdi-domain" :rules="[v => !!v || 'Název organizace je povinný']"
+                                        required />
+                                </v-col>
+                            </v-row>
+                        </v-container>
                     </v-card-text>
-                    <v-card-actions>
-                        <v-spacer></v-spacer>
-                        <v-btn text @click="dialog = false">Zrušit</v-btn>
-                        <v-btn type="submit" color="primary">Vytvořit</v-btn>
+
+                    <v-card-actions class="justify-end">
+                        <v-btn variant="text" @click="dialog = false" color="grey-darken-1">
+                            Zrušit
+                        </v-btn>
+                        <v-btn type="submit" color="primary" variant="elevated">
+                            Vytvořit
+                        </v-btn>
                     </v-card-actions>
                 </v-form>
             </v-card>
         </v-dialog>
+
     </v-container>
 </template>
 
@@ -55,7 +61,7 @@ const organizations: Ref<Array<{ name: string }>> = ref([])
 
 const dialog = ref(false)
 const formData = ref({
-   name: ''
+    name: ''
 })
 
 watch(dialog, (newValue) => {

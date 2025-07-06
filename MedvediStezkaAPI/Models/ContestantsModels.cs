@@ -1,4 +1,5 @@
 ﻿using Dahomey.Cbor.Attributes;
+using MedvediStezkaAPI.Attributes;
 using System.ComponentModel.DataAnnotations;
 
 namespace MedvediStezkaAPI.Models
@@ -24,9 +25,11 @@ namespace MedvediStezkaAPI.Models
     public record ContestantName
     {
         [Required]
+        [NoSpaces]
         public required string First { get; set; }
         public string? Middle { get; set; }
         [Required]
+        [NoSpaces]
         public required string Last { get; set; }
     }
 }

@@ -4,11 +4,7 @@
             <v-col cols="12">
                 <v-btn @click="dialog = true">Vytvořit novou soutěž</v-btn>
             </v-col>
-            <v-col
-                v-for="competition in competitions"
-                :key="competition.id"
-                cols="12"
-            >
+            <v-col v-for="competition in competitions" :key="competition.id" cols="12">
                 <v-card :to="`/competition/${competition.id}`" link class="pb-4">
                     <v-card-title>{{ competition.location }}</v-card-title>
                     <v-card-subtitle>{{ competition.schoolYear }}</v-card-subtitle>
@@ -17,37 +13,53 @@
             </v-col>
         </v-row>
 
-        <v-dialog v-model="dialog" max-width="500">
+        <v-dialog v-model="dialog" max-width="700">
             <v-card>
                 <v-form @submit.prevent="createCompetition">
-                    <v-card-title>Vytvořit novou soutěž</v-card-title>
+                    <v-card-title class="text-h6 font-weight-bold">
+                        Vytvořit novou soutěž
+                    </v-card-title>
+
                     <v-card-text>
-                        <v-text-field
-                            v-model="formData.location"
-                            label="Místo konání"
-                            :rules="[v => !!v || 'Místo konání je povinné']"
-                            required
-                        ></v-text-field>
-                        <v-text-field
-                            v-model="formData.schoolYear"
-                            label="Školní rok"
-                            :rules="[v => !!v || 'Školní rok je povinný']"
-                            required
-                        ></v-text-field>
-                        <v-select
+                        <v-container class="pa-0" fluid>
+                            <v-row dense>
+                                <v-col cols="12">
+                                    <v-text-field v-model="formData.location" label="Místo konání"
+                                        prepend-icon="mdi-map-marker" :rules="[v => !!v || 'Místo konání je povinné']"
+                                        required />
+                                </v-col>
+                                <v-col cols="12">
+                                    <v-text-field v-model="formData.schoolYear" label="Školní rok"
+                                        prepend-icon="mdi-calendar" placeholder="YYYY/YYYY"
+                                        :rules="[v => !!v || 'Školní rok je povinný', v => /^\d{4}\/\d{4}$/.test(v) || 'Školní rok musí být ve formátu YYYY/YYYY']"
+                                        required />
+                                </v-col>
+                                <v-col cols="12">
+                                    <v-select v-model="formData.type" :items="Object.keys(competitionTypes)"
+                                        :item-title="key => competitionTypes[key]" :item-value="key => key"
+                                        label="Druh kola" prepend-icon="mdi-trophy"
+                                        :rules="[v => !!v || 'Druh kola je povinný']" required />
+                                </v-col>
+                                <!-- <v-btn-toggle
                             v-model="formData.type"
-                            :items="Object.keys(competitionTypes)"
-                            :item-title="key => competitionTypes[key]"
-                            :item-value="key => key"
-                            label="Druh kola"
-                            :rules="[v => !!v || 'Druh kola je povinný']"
-                            required
-                        ></v-select>
+                            color="primary"
+                            mandatory
+                            >
+                            <v-btn value="district">Okresní kolo</v-btn>
+                            <v-btn value="region">Krajské kolo</v-btn>
+                            <v-btn value="nation">Republikové kolo</v-btn>
+                        </v-btn-toggle> -->
+                            </v-row>
+                        </v-container>
                     </v-card-text>
-                    <v-card-actions>
-                        <v-spacer></v-spacer>
-                        <v-btn text @click="dialog = false">Zrušit</v-btn>
-                        <v-btn type="submit" color="primary">Vytvořit</v-btn>
+
+                    <v-card-actions class="justify-end">
+                        <v-btn variant="text" @click="dialog = false" color="grey-darken-1">
+                            Zrušit
+                        </v-btn>
+                        <v-btn type="submit" color="primary" variant="elevated">
+                            Vytvořit
+                        </v-btn>
                     </v-card-actions>
                 </v-form>
             </v-card>
@@ -115,11 +127,7 @@ async function createCompetition() {
             'Authorization': `Bearer ${localStorage.getItem('token')}`,
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({
-            'location': formData.value.location,
-            'schoolYear': formData.value.schoolYear,
-            'type': formData.value.type
-        })
+        body: JSON.stringify(formData.value)
     })
 
     if (!response.ok) {
