@@ -1,4 +1,5 @@
 ﻿using Dahomey.Cbor.Attributes;
+using System.ComponentModel.DataAnnotations;
 
 namespace MedvediStezkaAPI.Models
 {
@@ -10,5 +11,22 @@ namespace MedvediStezkaAPI.Models
         public int BirthYear { get; set; }
         [CborProperty("name")]
         public required Dictionary<string, string?> Name { get; set; }
+    }
+
+    public record ContestantCreate
+    {
+        [Required]
+        public required uint BirthYear { get; set; }
+        [Required]
+        public required ContestantName Name { get; set; }
+    }
+
+    public record ContestantName
+    {
+        [Required]
+        public required string First { get; set; }
+        public string? Middle { get; set; }
+        [Required]
+        public required string Last { get; set; }
     }
 }

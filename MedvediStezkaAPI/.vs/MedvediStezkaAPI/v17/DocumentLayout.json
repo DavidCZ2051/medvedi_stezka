@@ -3,12 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\david\\Desktop\\medvedi_stezka\\MedvediStezkaAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{294EBCE7-F6FA-452B-B659-318E2B938F8D}|MedvediStezkaAPI.csproj|c:\\users\\david\\desktop\\medvedi_stezka\\medvedistezkaapi\\services\\contestantservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{294EBCE7-F6FA-452B-B659-318E2B938F8D}|MedvediStezkaAPI.csproj|solutionrelative:services\\contestantservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{294EBCE7-F6FA-452B-B659-318E2B938F8D}|MedvediStezkaAPI.csproj|c:\\users\\david\\desktop\\medvedi_stezka\\medvedistezkaapi\\models\\contestantsmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{294EBCE7-F6FA-452B-B659-318E2B938F8D}|MedvediStezkaAPI.csproj|solutionrelative:models\\contestantsmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{294EBCE7-F6FA-452B-B659-318E2B938F8D}|MedvediStezkaAPI.csproj|c:\\users\\david\\desktop\\medvedi_stezka\\medvedistezkaapi\\controllers\\contestantcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{294EBCE7-F6FA-452B-B659-318E2B938F8D}|MedvediStezkaAPI.csproj|solutionrelative:controllers\\contestantcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,32 +14,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ContestantsModels.cs",
-              "DocumentMoniker": "C:\\Users\\david\\Desktop\\medvedi_stezka\\MedvediStezkaAPI\\Models\\ContestantsModels.cs",
-              "RelativeDocumentMoniker": "Models\\ContestantsModels.cs",
-              "ToolTip": "C:\\Users\\david\\Desktop\\medvedi_stezka\\MedvediStezkaAPI\\Models\\ContestantsModels.cs",
-              "RelativeToolTip": "Models\\ContestantsModels.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-05T23:50:51.156Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ContestantService.cs",
-              "DocumentMoniker": "C:\\Users\\david\\Desktop\\medvedi_stezka\\MedvediStezkaAPI\\Services\\ContestantService.cs",
-              "RelativeDocumentMoniker": "Services\\ContestantService.cs",
-              "ToolTip": "C:\\Users\\david\\Desktop\\medvedi_stezka\\MedvediStezkaAPI\\Services\\ContestantService.cs",
-              "RelativeToolTip": "Services\\ContestantService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAABAAAAAAAAAA==",
+              "Title": "ContestantController.cs",
+              "DocumentMoniker": "C:\\Users\\david\\Desktop\\medvedi_stezka\\MedvediStezkaAPI\\Controllers\\ContestantController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ContestantController.cs",
+              "ToolTip": "C:\\Users\\david\\Desktop\\medvedi_stezka\\MedvediStezkaAPI\\Controllers\\ContestantController.cs",
+              "RelativeToolTip": "Controllers\\ContestantController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-05T23:12:43.87Z",
+              "WhenOpened": "2025-07-06T12:21:09.698Z",
               "EditorCaption": ""
             }
           ]
