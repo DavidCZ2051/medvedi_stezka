@@ -2,29 +2,35 @@
     <v-container>
         <v-row>
             <v-col cols="12">
-                <v-btn @click="dialog = true">Vytvořit novou jednotu</v-btn>
-            </v-col>
-            <v-col v-for="organization in organizations" :key="organization.name" cols="12" class="py-1">
-                <v-card>
-                    <v-card-title>{{ organization.name }}</v-card-title>
-                </v-card>
+                <v-btn @click="dialog = true">Vytvořit novou hlídku</v-btn>
             </v-col>
         </v-row>
 
-        <v-dialog v-model="dialog" max-width="500">
+        <v-dialog v-model="dialog" max-width="700">
             <v-card>
-                <v-form @submit.prevent="createOrganization">
+                <v-form @submit.prevent="createTeam">
                     <v-card-title class="text-h6 font-weight-bold">
-                        Vytvořit novou jednotu
+                        Vytvořit novou hlídku
                     </v-card-title>
 
                     <v-card-text>
                         <v-container class="pa-0" fluid>
                             <v-row dense>
+                                <v-col cols="6">
+                                    <v-text-field v-model="formData.name.first" label="Jméno"
+                                        placeholder="Druhé jméno odělte mezerou" prepend-icon="mdi-account"
+                                        :rules="[v => !!v || 'Jméno je povinné']" required />
+                                </v-col>
+                                <v-col cols="6">
+                                    <v-text-field v-model="formData.name.last" label="Příjmení"
+                                        :rules="[v => !!v || 'Příjmení je povinné']" required />
+                                </v-col>
                                 <v-col cols="12">
-                                    <v-text-field v-model="formData.name" label="Název jednoty"
-                                        prepend-icon="mdi-domain" :rules="[v => !!v || 'Název jednoty je povinný']"
-                                        required />
+                                    <v-text-field v-model="formData.birthYear" label="Rok narození"
+                                        prepend-icon="mdi-calendar" placeholder="YYYY" :rules="[
+                                            v => !!v || 'Rok narození je povinný',
+                                            v => /^\d{4}$/.test(v) || 'Rok narození musí být ve formátu YYYY'
+                                        ]" required />
                                 </v-col>
                             </v-row>
                         </v-container>
@@ -41,7 +47,6 @@
                 </v-form>
             </v-card>
         </v-dialog>
-
     </v-container>
 </template>
 
@@ -51,27 +56,27 @@ import type { Ref } from 'vue'
 import { useRouter } from 'vue-router'
 
 onMounted(async () => {
-    await fetchOrganizations()
+    await fetchTeams()
 })
 
 const instance = getCurrentInstance()!
 const router = useRouter()
 
-const organizations: Ref<Array<{ name: string }>> = ref([])
+const teams: Ref<Array<{ id: string,  }>> = ref([])
 
 const dialog = ref(false)
 const formData = ref({
-    name: ''
+   
 })
 
 watch(dialog, (newValue) => {
     if (!newValue) {
-        formData.value = { name: '' }
+        formData.value = { birthYear: '', name: { first: '', last: '' } }
     }
 })
 
-async function fetchOrganizations() {
-    const response = await fetch(`${instance.appContext.config.globalProperties.$url}/organizations`, {
+async function fetchTeams() {
+    const response = await fetch(`${instance.appContext.config.globalProperties.$url}/teams`, {
         method: 'GET',
         headers: {
             'Authorization': `Bearer ${localStorage.getItem('token')}`
@@ -84,23 +89,22 @@ async function fetchOrganizations() {
             router.replace('/login')
             return
         }
-        alert('Failed to fetch organizations: ' + response.statusText)
+        alert('Failed to fetch teams: ' + response.statusText)
         return
     }
 
-    organizations.value = await response.json()
+    teams.value = await response.json()
 }
 
-async function createOrganization() {
-    const response = await fetch(`${instance.appContext.config.globalProperties.$url}/organizations`, {
+
+async function createTeam() {
+    const response = await fetch(`${instance.appContext.config.globalProperties.$url}/teams`, {
         method: 'POST',
         headers: {
             'Authorization': `Bearer ${localStorage.getItem('token')}`,
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({
-            'name': formData.value.name
-        })
+        body: JSON.stringify(formData.value)
     })
 
     if (!response.ok) {
@@ -109,11 +113,11 @@ async function createOrganization() {
             router.replace('/login')
             return
         }
-        alert('Failed to create organization: ' + response.statusText)
+        alert('Failed to create team: ' + response.statusText)
         return
     }
 
-    await fetchOrganizations()
+    //await fetchTeams()
     dialog.value = false
 }
 

@@ -10,8 +10,9 @@
     <v-navigation-drawer>
         <v-list-item link title="Soutěž" prepend-icon="mdi-trophy"></v-list-item>
         <v-list-item link title="Kontroly" prepend-icon="mdi-clipboard-text"></v-list-item>
-        <v-list-item link title="Týmy" prepend-icon="mdi-account-group"></v-list-item>
-        <v-list-item link title="Kartičky" prepend-icon="mdi-card-account-details"></v-list-item>
+        <v-list-item link title="Hlídky" prepend-icon="mdi-account-group"></v-list-item>
+        <v-list-item link title="Karty" prepend-icon="mdi-card-account-details"></v-list-item>
+        <v-list-item link title="Výsledky" prepend-icon="mdi-trophy"></v-list-item>
     </v-navigation-drawer>
 </template>
 

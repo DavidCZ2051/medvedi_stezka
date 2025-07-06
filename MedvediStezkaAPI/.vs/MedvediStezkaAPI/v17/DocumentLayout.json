@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\david\\Desktop\\medvedi_stezka\\MedvediStezkaAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{294EBCE7-F6FA-452B-B659-318E2B938F8D}|MedvediStezkaAPI.csproj|c:\\users\\david\\desktop\\medvedi_stezka\\medvedistezkaapi\\controllers\\contestantcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{294EBCE7-F6FA-452B-B659-318E2B938F8D}|MedvediStezkaAPI.csproj|solutionrelative:controllers\\contestantcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{294EBCE7-F6FA-452B-B659-318E2B938F8D}|MedvediStezkaAPI.csproj|c:\\users\\david\\desktop\\medvedi_stezka\\medvedistezkaapi\\controllers\\teamcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{294EBCE7-F6FA-452B-B659-318E2B938F8D}|MedvediStezkaAPI.csproj|solutionrelative:controllers\\teamcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{294EBCE7-F6FA-452B-B659-318E2B938F8D}|MedvediStezkaAPI.csproj|c:\\users\\david\\desktop\\medvedi_stezka\\medvedistezkaapi\\models\\teammodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{294EBCE7-F6FA-452B-B659-318E2B938F8D}|MedvediStezkaAPI.csproj|solutionrelative:models\\teammodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{294EBCE7-F6FA-452B-B659-318E2B938F8D}|MedvediStezkaAPI.csproj|c:\\users\\david\\desktop\\medvedi_stezka\\medvedistezkaapi\\services\\teamservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{294EBCE7-F6FA-452B-B659-318E2B938F8D}|MedvediStezkaAPI.csproj|solutionrelative:services\\teamservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,19 +22,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ContestantController.cs",
-              "DocumentMoniker": "C:\\Users\\david\\Desktop\\medvedi_stezka\\MedvediStezkaAPI\\Controllers\\ContestantController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ContestantController.cs",
-              "ToolTip": "C:\\Users\\david\\Desktop\\medvedi_stezka\\MedvediStezkaAPI\\Controllers\\ContestantController.cs",
-              "RelativeToolTip": "Controllers\\ContestantController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAJAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "TeamService.cs",
+              "DocumentMoniker": "C:\\Users\\david\\Desktop\\medvedi_stezka\\MedvediStezkaAPI\\Services\\TeamService.cs",
+              "RelativeDocumentMoniker": "Services\\TeamService.cs",
+              "ToolTip": "C:\\Users\\david\\Desktop\\medvedi_stezka\\MedvediStezkaAPI\\Services\\TeamService.cs",
+              "RelativeToolTip": "Services\\TeamService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-06T12:21:09.698Z",
+              "WhenOpened": "2025-07-06T22:34:53.315Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TeamModels.cs",
+              "DocumentMoniker": "C:\\Users\\david\\Desktop\\medvedi_stezka\\MedvediStezkaAPI\\Models\\TeamModels.cs",
+              "RelativeDocumentMoniker": "Models\\TeamModels.cs",
+              "ToolTip": "C:\\Users\\david\\Desktop\\medvedi_stezka\\MedvediStezkaAPI\\Models\\TeamModels.cs",
+              "RelativeToolTip": "Models\\TeamModels.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-06T22:24:37.746Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TeamController.cs",
+              "DocumentMoniker": "C:\\Users\\david\\Desktop\\medvedi_stezka\\MedvediStezkaAPI\\Controllers\\TeamController.cs",
+              "RelativeDocumentMoniker": "Controllers\\TeamController.cs",
+              "ToolTip": "C:\\Users\\david\\Desktop\\medvedi_stezka\\MedvediStezkaAPI\\Controllers\\TeamController.cs",
+              "RelativeToolTip": "Controllers\\TeamController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-06T22:21:28.652Z",
               "EditorCaption": ""
             }
           ]

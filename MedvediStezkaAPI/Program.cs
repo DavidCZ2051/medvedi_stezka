@@ -36,6 +36,7 @@ builder.Services.AddScoped<CompetitionService>();
 builder.Services.AddScoped<ContestantService>();
 builder.Services.AddScoped<HelloService>();
 builder.Services.AddScoped<OrganizationService>();
+builder.Services.AddScoped<TeamService>();
 builder.Services.AddScoped<UserService>();
 
 builder.Services.AddCors(options =>

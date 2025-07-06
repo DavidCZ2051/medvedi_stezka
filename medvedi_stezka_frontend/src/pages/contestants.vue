@@ -32,7 +32,7 @@
                                 </v-col>
                                 <v-col cols="12">
                                     <v-text-field v-model="formData.birthYear" label="Rok narození"
-                                        prepend-icon="mdi-calendar" :rules="[
+                                        prepend-icon="mdi-calendar" placeholder="YYYY" :rules="[
                                             v => !!v || 'Rok narození je povinný',
                                             v => /^\d{4}$/.test(v) || 'Rok narození musí být ve formátu YYYY'
                                         ]" required />
@@ -69,9 +69,9 @@ const router = useRouter()
 
 const contestants: Ref<Array<{ id: string, birthYear: number, name: { first: string, middle: string | null, last: string } }>> = ref([])
 const headers = [
-    { title: 'Jméno', value: 'name.first' },
-    { title: 'Příjmení', value: 'name.last' },
-    { title: 'Rok narození', value: 'birthYear' }
+    { title: 'Jméno', value: 'name.first', sortable: true },
+    { title: 'Příjmení', value: 'name.last', sortable: true },
+    { title: 'Rok narození', value: 'birthYear', sortable: true }
 ]
 
 const dialog = ref(false)

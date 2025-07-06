@@ -9,7 +9,7 @@
     </v-app-bar>
     <v-navigation-drawer>
         <v-list-item link title="Soutěže" prepend-icon="mdi-trophy" :to="'competitions'"></v-list-item>
-        <v-list-item link title="Organizace" prepend-icon="mdi-domain" :to="'organizations'"></v-list-item>
+        <v-list-item link title="Jednoty" prepend-icon="mdi-domain" :to="'organizations'"></v-list-item>
         <v-list-item link title="Soutěžící" prepend-icon="mdi-account-group" :to="'contestants'"></v-list-item>
     </v-navigation-drawer>
 </template>

@@ -41,7 +41,7 @@ DEFINE FIELD OVERWRITE cards ON TABLE competitions TYPE array<record<cards>> DEF
 DEFINE TABLE IF NOT EXISTS teams;
 DEFINE FIELD OVERWRITE number ON TABLE teams TYPE int | null; # Team number is unknown until they arrive at the finish line
 DEFINE FIELD OVERWRITE organization ON TABLE teams TYPE record<organizations>;
-DEFINE FIELD OVERWRITE category ON TABLE teams TYPE "1F" | "1M" | "2F" | "2M" | "3F" | "3M" | "4F" | "4M" | "5F" | "5M";
+DEFINE FIELD OVERWRITE category ON TABLE teams TYPE "M1" | "F1" | "M2" | "F2" | "M3" | "F3" | "M4" | "F4" | "M5" | "F5";
 DEFINE FIELD OVERWRITE members ON TABLE teams TYPE array<record<contestants>>;
 
 # Deaf checks table
