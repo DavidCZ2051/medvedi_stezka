@@ -9,9 +9,10 @@ namespace MedvediStezkaAPI.Services
 
         public async Task<List<Contestant>> GetAllContestants()
         {
-            var response = await _db.Query(
-                $"SELECT record::id(id) AS id, birthYear FROM contestants;"
+            var response = await _db.RawQuery(
+                $"SELECT record::id(id) AS id, birthYear, name FROM contestants;"
             );
+
             return response.GetValue<List<Contestant>>(0)!;
         }
     }

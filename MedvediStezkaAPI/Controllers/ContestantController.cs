@@ -1,7 +1,6 @@
 ﻿using MedvediStezkaAPI.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using MedvediStezkaAPI.Models;
 
 namespace MedvediStezkaAPI.Controllers
 {
@@ -15,8 +14,7 @@ namespace MedvediStezkaAPI.Controllers
         [Authorize]
         public async Task<IActionResult> GetContestants()
         {
-            var test = await _contestantService.GetAllContestants();
-            return Ok(test);
+            return Ok(await _contestantService.GetAllContestants());
         }
     }
 }

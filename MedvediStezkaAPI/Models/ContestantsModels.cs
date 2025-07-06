@@ -1,15 +1,14 @@
-﻿namespace MedvediStezkaAPI.Models
+﻿using Dahomey.Cbor.Attributes;
+
+namespace MedvediStezkaAPI.Models
 {
     public class Contestant
     {
-        public string Id;
-        public uint BirthYear;
-    }
-
-    public record Name
-    {
-        public required string First { get; set; }
-        public string? Middle { get; set; }
-        public required string Last { get; set; }
+        [CborProperty("id")]
+        public required string Id { get; set; }
+        [CborProperty("birthYear")]
+        public int BirthYear { get; set; }
+        [CborProperty("name")]
+        public required Dictionary<string, string?> Name { get; set; }
     }
 }
